@@ -1,0 +1,17 @@
+{
+  "name": "My Project with MySQL",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
+  "features": {},
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y mysql-client",
+  "forwardPorts": [3306],
+  "remoteEnv": {
+    "MYSQL_HOST": "localhost",
+    "MYSQL_PORT": "3306",
+    "MYSQL_USER": "root",
+    "MYSQL_PASSWORD": "root",
+    "MYSQL_DATABASE": "mydb"
+  },
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev",
+  "workspaceFolder": "/workspace"
+}
